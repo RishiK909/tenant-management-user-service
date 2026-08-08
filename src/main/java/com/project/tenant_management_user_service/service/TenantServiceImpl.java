@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class TenantServiceImpl implements TenantService {
@@ -22,7 +23,7 @@ public class TenantServiceImpl implements TenantService {
     }
 
     @Override
-    public ApiResponse<Void> createTenantProfile(Long userId, TenantRegisterDTO request) {
+    public ApiResponse<Void> createTenantProfile(UUID userId, TenantRegisterDTO request) {
 
         if (tenantRepository.findByUserId(userId).isPresent()) {
             return new ApiResponse<>("Tenant profile already exists for this user", false);
@@ -43,7 +44,7 @@ public class TenantServiceImpl implements TenantService {
     }
 
     @Override
-    public ApiResponse<Void> updateTenantProfile(Long userId, TenantRegisterDTO request) {
+    public ApiResponse<Void> updateTenantProfile(UUID userId, TenantRegisterDTO request) {
 
         Optional<Tenant> tenantOptional = tenantRepository.findByUserId(userId);
 
@@ -64,7 +65,7 @@ public class TenantServiceImpl implements TenantService {
     }
 
     @Override
-    public ApiResponse<Tenant> getMyProfile(Long userId) {
+    public ApiResponse<Tenant> getMyProfile(UUID userId) {
 
         Optional<Tenant> tenantOptional = tenantRepository.findByUserId(userId);
 

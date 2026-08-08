@@ -13,6 +13,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.UUID;
 
 @Component
 public class JwtFilter extends OncePerRequestFilter {
@@ -30,14 +31,18 @@ public class JwtFilter extends OncePerRequestFilter {
 
         if (header != null && header.startsWith("Bearer ")) {
 
+            // token : Here we are removing the Bearer so check the token
             String token = header.substring(7);
 
+            // Checking whether the token is expired or not
             if (!jwtUtil.isTokenExpired(token)) {
 
                 String email = jwtUtil.extractEmail(token);
-                Long userId = jwtUtil.extractUserId(token);
+                UUID userId = jwtUtil.extractUserId(token);
                 String role = jwtUtil.extractRole(token);
 
+                // ye Spring Security ka standard object hai jo batata hai
+                //"ye user authenticated hai"
                 UsernamePasswordAuthenticationToken auth =
                         new UsernamePasswordAuthenticationToken(
                                 email,
@@ -51,6 +56,7 @@ public class JwtFilter extends OncePerRequestFilter {
             }
         }
 
+        //Request moves forward
         filterChain.doFilter(request, response);
     }
 }

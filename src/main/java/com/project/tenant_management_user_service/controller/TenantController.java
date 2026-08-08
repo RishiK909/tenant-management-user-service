@@ -12,6 +12,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/tenant")
@@ -29,7 +30,7 @@ public class TenantController {
             @Valid @RequestBody TenantRegisterDTO request,
             HttpServletRequest httpRequest) {
 
-        Long userId = (Long) httpRequest.getAttribute("userId");
+        UUID userId = (UUID) httpRequest.getAttribute("userId");
 
         ApiResponse<Void> response = tenantService.createTenantProfile(userId, request);
         return response.isStatus()
@@ -40,7 +41,7 @@ public class TenantController {
     @GetMapping("/get-profile")
     public ResponseEntity<ApiResponse<Tenant>> getMyProfile(HttpServletRequest httpRequest) {
 
-        Long userId = (Long) httpRequest.getAttribute("userId");
+        UUID userId = (UUID) httpRequest.getAttribute("userId");
 
         ApiResponse<Tenant> response = tenantService.getMyProfile(userId);
         return response.isStatus()
@@ -53,7 +54,7 @@ public class TenantController {
             @Valid @RequestBody TenantRegisterDTO request,
             HttpServletRequest httpRequest) {
 
-        Long userId = (Long) httpRequest.getAttribute("userId");
+        UUID userId = (UUID) httpRequest.getAttribute("userId");
 
         ApiResponse<Void> response = tenantService.updateTenantProfile(userId, request);
         return response.isStatus()
