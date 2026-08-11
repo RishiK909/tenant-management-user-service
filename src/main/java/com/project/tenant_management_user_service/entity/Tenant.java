@@ -5,18 +5,19 @@ import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
 @Table(name = "tenants")
 public class Tenant extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id")
-    private Long tenantId;
+    private UUID tenantId;
 
     @Column(name = "user_id", nullable = false)
-    private Long userId;
+    private UUID userId;
 
     @Column(name = "property_id")
     private Long propertyId;
@@ -33,7 +34,7 @@ public class Tenant extends BaseEntity {
     @Column(name = "rent_due_day")
     private Integer rentDueDay;
 
-    public Tenant(Long tenantId, Long userId, Long propertyId, LocalDate leaseStartDate, LocalDate leaseEndDate, BigDecimal rentAmount, Integer rentDueDay) {
+    public Tenant(UUID tenantId, UUID userId, Long propertyId, LocalDate leaseStartDate, LocalDate leaseEndDate, BigDecimal rentAmount, Integer rentDueDay) {
         this.tenantId = tenantId;
         this.userId = userId;
         this.propertyId = propertyId;
@@ -45,19 +46,19 @@ public class Tenant extends BaseEntity {
 
     public Tenant() {}
 
-    public Long getTenantId() {
+    public UUID getTenantId() {
         return tenantId;
     }
 
-    public void setTenantId(Long tenantId) {
+    public void setTenantId(UUID tenantId) {
         this.tenantId = tenantId;
     }
 
-    public Long getUserId() {
+    public UUID getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(UUID userId) {
         this.userId = userId;
     }
 
