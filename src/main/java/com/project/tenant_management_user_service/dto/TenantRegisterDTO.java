@@ -6,11 +6,12 @@ import jakarta.validation.constraints.Positive;
 
 import java.time.LocalDate;
 import java.math.BigDecimal;
+import java.util.UUID;
 
 public class TenantRegisterDTO {
 
     @NotNull(message = "Property ID is required")
-    private Long propertyId;
+    private UUID propertyId;
 
     @NotNull(message = "Lease start date is required")
     private LocalDate leaseStartDate;
@@ -26,8 +27,13 @@ public class TenantRegisterDTO {
     @NotNull(message = "Rent due day is required")
     private Integer rentDueDay;
 
-    public Long getPropertyId() { return propertyId; }
-    public void setPropertyId(Long propertyId) { this.propertyId = propertyId; }
+    public UUID getPropertyId() {
+        return propertyId;
+    }
+
+    public void setPropertyId(UUID propertyId) {
+        this.propertyId = propertyId;
+    }
 
     public LocalDate getLeaseStartDate() { return leaseStartDate; }
     public void setLeaseStartDate(LocalDate leaseStartDate) { this.leaseStartDate = leaseStartDate; }

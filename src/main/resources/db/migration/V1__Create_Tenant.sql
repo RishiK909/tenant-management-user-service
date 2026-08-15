@@ -2,7 +2,7 @@ CREATE TABLE tenants
 (
     id                  CHAR(36),
     user_id             CHAR(36),
-    property_id         BIGINT,
+    property_id         CHAR(36),
     lease_start_date    DATE,
     lease_end_date      DATE,
     rent_amount         DECIMAL(10,2),
