@@ -1,7 +1,7 @@
-package com.project.tenant_management_user_service.Repository;
+package com.tms.tenant.service.Repository;
 
 
-import com.project.tenant_management_user_service.entity.Tenant;
+import com.tms.tenant.service.entity.Tenant;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.project.tenant_management_user_service.dto;
+package com.tms.tenant.service.dto;
 
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotNull;

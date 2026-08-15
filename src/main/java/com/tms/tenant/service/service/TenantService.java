@@ -1,9 +1,9 @@
-package com.project.tenant_management_user_service.service;
+package com.tms.tenant.service.service;
 
 
-import com.project.tenant_management_user_service.dto.ApiResponse;
-import com.project.tenant_management_user_service.dto.TenantRegisterDTO;
-import com.project.tenant_management_user_service.entity.Tenant;
+import com.tms.tenant.service.dto.ApiResponse;
+import com.tms.tenant.service.dto.TenantRegisterDTO;
+import com.tms.tenant.service.entity.Tenant;
 
 import java.util.List;
 import java.util.UUID;

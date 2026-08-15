@@ -1,7 +1,7 @@
-package com.project.tenant_management_user_service.entity;
+package com.tms.tenant.service.entity;
 
 
-import com.project.tenant_management_user_service.enums.Status;
+import com.tms.tenant.service.enums.Status;
 import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -10,6 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 
 /**
@@ -24,7 +25,7 @@ public class BaseEntity {
     private LocalDateTime createdAt;
 
     @Column(name = "created_by")
-    private Long createdBy;
+    private UUID createdBy;
 
     @UpdateTimestamp
     @Column(name = "updated_at")
@@ -38,7 +39,7 @@ public class BaseEntity {
     private LocalDateTime deletedAt;
 
     @Column(name = "updated_by")
-    private Long updated_by;
+    private UUID updated_by;
 
 
     public LocalDateTime getCreatedAt() {
@@ -49,11 +50,11 @@ public class BaseEntity {
         this.createdAt = createdAt;
     }
 
-    public Long getCreatedBy() {
+    public UUID getCreatedBy() {
         return createdBy;
     }
 
-    public void setCreatedBy(Long createdBy) {
+    public void setCreatedBy(UUID createdBy) {
         this.createdBy = createdBy;
     }
 
@@ -73,11 +74,11 @@ public class BaseEntity {
         this.deletedAt = deletedAt;
     }
 
-    public Long getUpdated_by() {
+    public UUID getUpdated_by() {
         return updated_by;
     }
 
-    public void setUpdated_by(Long updated_by) {
+    public void setUpdated_by(UUID updated_by) {
         this.updated_by = updated_by;
     }
 

@@ -1,4 +1,4 @@
-package com.project.tenant_management_user_service.enums;
+package com.tms.tenant.service.enums;
 
 public enum Status {
 

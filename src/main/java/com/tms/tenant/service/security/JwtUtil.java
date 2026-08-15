@@ -1,4 +1,4 @@
-package com.project.tenant_management_user_service.security;
+package com.tms.tenant.service.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

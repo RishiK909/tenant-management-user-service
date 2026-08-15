@@ -1,6 +1,5 @@
-package com.project.tenant_management_user_service.entity;
+package com.tms.tenant.service.entity;
 
-import com.project.tenant_management_user_service.enums.Status;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
