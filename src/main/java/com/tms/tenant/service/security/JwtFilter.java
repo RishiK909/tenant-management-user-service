@@ -1,4 +1,4 @@
-package com.project.tenant_management_user_service.security;
+package com.tms.tenant.service.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

@@ -1,4 +1,4 @@
-package com.project.tenant_management_user_service;
+package com.tms.tenant.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

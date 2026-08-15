@@ -1,7 +1,7 @@
-package com.project.tenant_management_user_service.exception;
+package com.tms.tenant.service.exception;
 
 
-import com.project.tenant_management_user_service.dto.ApiResponse;
+import com.tms.tenant.service.dto.ApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

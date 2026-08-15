@@ -1,10 +1,10 @@
-package com.project.tenant_management_user_service.controller;
+package com.tms.tenant.service.controller;
 
 
-import com.project.tenant_management_user_service.dto.ApiResponse;
-import com.project.tenant_management_user_service.dto.TenantRegisterDTO;
-import com.project.tenant_management_user_service.entity.Tenant;
-import com.project.tenant_management_user_service.service.TenantService;
+import com.tms.tenant.service.dto.ApiResponse;
+import com.tms.tenant.service.dto.TenantRegisterDTO;
+import com.tms.tenant.service.entity.Tenant;
+import com.tms.tenant.service.service.TenantService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

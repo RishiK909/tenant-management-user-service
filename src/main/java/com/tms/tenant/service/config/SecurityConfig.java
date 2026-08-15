@@ -1,6 +1,6 @@
-package com.project.tenant_management_user_service.config;
+package com.tms.tenant.service.config;
 
-import com.project.tenant_management_user_service.security.JwtFilter;
+import com.tms.tenant.service.security.JwtFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,12 +1,11 @@
-package com.project.tenant_management_user_service.service;
+package com.tms.tenant.service.service;
 
 
 
-import com.project.tenant_management_user_service.Repository.TenantRepository;
-import com.project.tenant_management_user_service.dto.ApiResponse;
-import com.project.tenant_management_user_service.dto.TenantRegisterDTO;
-import com.project.tenant_management_user_service.entity.Tenant;
-import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties;
+import com.tms.tenant.service.Repository.TenantRepository;
+import com.tms.tenant.service.dto.ApiResponse;
+import com.tms.tenant.service.dto.TenantRegisterDTO;
+import com.tms.tenant.service.entity.Tenant;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

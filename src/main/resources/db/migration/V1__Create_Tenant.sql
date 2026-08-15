@@ -1,17 +1,17 @@
 CREATE TABLE tenants
 (
-    id                  CHAR(36),
-    user_id             CHAR(36),
-    property_id         BIGINT,
+    id                  UUID NOT NULL ,
+    user_id             UUID,
+    property_id         UUID,
     lease_start_date    DATE,
     lease_end_date      DATE,
     rent_amount         DECIMAL(10,2),
     rent_due_day        INT,
 
     created_at          TIMESTAMP WITHOUT TIME ZONE,
-    created_by          BIGINT,
+    created_by          UUID,
     updated_at          TIMESTAMP WITHOUT TIME ZONE,
-    updated_by          BIGINT,
+    updated_by          UUID,
     deleted_at          TIMESTAMP WITHOUT TIME ZONE,
     status              VARCHAR(255),
 

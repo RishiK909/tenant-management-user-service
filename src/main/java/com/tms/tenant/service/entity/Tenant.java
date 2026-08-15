@@ -1,6 +1,5 @@
-package com.project.tenant_management_user_service.entity;
+package com.tms.tenant.service.entity;
 
-import com.project.tenant_management_user_service.enums.Status;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -20,7 +19,7 @@ public class Tenant extends BaseEntity {
     private UUID userId;
 
     @Column(name = "property_id")
-    private Long propertyId;
+    private UUID propertyId;
 
     @Column(name = "lease_start_date")
     private LocalDate leaseStartDate;
@@ -34,7 +33,7 @@ public class Tenant extends BaseEntity {
     @Column(name = "rent_due_day")
     private Integer rentDueDay;
 
-    public Tenant(UUID tenantId, UUID userId, Long propertyId, LocalDate leaseStartDate, LocalDate leaseEndDate, BigDecimal rentAmount, Integer rentDueDay) {
+    public Tenant(UUID tenantId, UUID userId, UUID propertyId, LocalDate leaseStartDate, LocalDate leaseEndDate, BigDecimal rentAmount, Integer rentDueDay) {
         this.tenantId = tenantId;
         this.userId = userId;
         this.propertyId = propertyId;
@@ -43,6 +42,7 @@ public class Tenant extends BaseEntity {
         this.rentAmount = rentAmount;
         this.rentDueDay = rentDueDay;
     }
+
 
     public Tenant() {}
 
@@ -62,11 +62,11 @@ public class Tenant extends BaseEntity {
         this.userId = userId;
     }
 
-    public Long getPropertyId() {
+    public UUID getPropertyId() {
         return propertyId;
     }
 
-    public void setPropertyId(Long propertyId) {
+    public void setPropertyId(UUID propertyId) {
         this.propertyId = propertyId;
     }
 
